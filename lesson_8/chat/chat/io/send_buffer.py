@@ -1,0 +1,2 @@
+class SendBuffer:
+    pass

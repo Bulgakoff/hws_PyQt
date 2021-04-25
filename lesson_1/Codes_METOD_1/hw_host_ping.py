@@ -10,7 +10,7 @@ def host_range_ping(addresses, host_ping_fn):
 # code:
 host_range_ping([...], host_ping)
 
-# test
+# tests
 host_ping_mock = MagicMock()
 host_range_ping([...], host_ping_mock)
 ...

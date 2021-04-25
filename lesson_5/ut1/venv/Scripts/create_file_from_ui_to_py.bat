@@ -1,0 +1,1 @@
+pyuic5.exe -x C:/PPPy/fir/DB_PyQT/lesson_5/ut1/tracker1.ui -o C:/PPPy/fir/DB_PyQT/lesson_5/ut1/tracker1.py

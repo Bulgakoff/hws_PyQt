@@ -1,0 +1,2 @@
+class ContactsStorage:
+    pass

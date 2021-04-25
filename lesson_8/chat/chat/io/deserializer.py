@@ -1,0 +1,2 @@
+class Deserializer:
+    pass

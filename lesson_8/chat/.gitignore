@@ -1,0 +1,5 @@
+*.pyc
+/venv
+/gb_chat.egg-info
+/dist
+/build

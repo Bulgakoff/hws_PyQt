@@ -17,7 +17,7 @@ class TypedProperty:
     def __set__(self, instance, value):
         print("__set__")
         if not isinstance(value, self.type):
-            raise TypeError("Значение должно быть типа %s" % self.type)
+            raise TypeError(f"Значение должно быть типа {self.type}"  )
         setattr(instance, self.name, value)
 
     def __delete__(self, instance):
@@ -26,14 +26,14 @@ class TypedProperty:
 
 
 class Foo:
-    name = TypedProperty("name", str)
-    # num = TypedProperty("num", int, 42)
+    # name = TypedProperty("name", str)
+    num = TypedProperty("num", int)
 
 
 if __name__ == "__main__":
     f = Foo()
-    b = Foo()
-    a = f.name  # Неявно вызовет Foo.name.__get__(f, Foo)
-    f.name = "Гвидо"  # Вызовет Foo.name.__set__(f, "Guido")
+    # b = Foo()
+    # a = f.name  # Неявно вызовет Foo.name.__get__(f, Foo)
+    # f.name = "Гвидо"  # Вызовет Foo.name.__set__(f, "Guido")
     f.name = 4
-    del f.name  # Вызовет Foo.name.__delete__(f)
+    # del f.name  # Вызовет Foo.name.__delete__(f)

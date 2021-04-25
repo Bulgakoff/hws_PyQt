@@ -1,0 +1,2 @@
+class ChatWindow:
+    pass

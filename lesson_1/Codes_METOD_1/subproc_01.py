@@ -22,19 +22,19 @@ print("Файлы для упаковки:", files)
 # Будет создан процесс архиватора 7-Zip
 # Для Windows флаг CREATE_NEW_CONSOLE укажет создать новую консоль для процесса
 
-# packer = Popen(['7z','a','test.zip', *files])
+# packer = Popen(['7z','a','tests.zip', *files])
 # Ждём завершения процесса, чтобы что-то делать дальше...
 # packer.wait()
 # print("Ждём упаковку...")
 # Можно упростить, т.к. Popen поддерживает менеджер контекста:
-with Popen(["7z", "a", "test.zip", *files], creationflags=CREATE_NEW_CONSOLE) as packer:
+with Popen(["7z", "a", "tests.zip", *files], creationflags=CREATE_NEW_CONSOLE) as packer:
     print(packer.args)
     print("Ждём упаковку...")
 
 print("Файлы упакованы, можно переименовывать")
 
 # Переименовываем файл, созданный архиватором
-os.rename("test.zip", "backup.zip")
+os.rename("tests.zip", "backup.zip")
 
 # В Python 3.5 добавлен упрощенный способ создания процессов - функция run.
 # run запускает процесс, ждёт его завершения, возвращает объект CompletedProcess.
